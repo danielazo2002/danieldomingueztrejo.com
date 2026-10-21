@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Domínguez Trejo — Data Engineer</title>
+<meta name="description" content="Data engineer building reliable pipelines from raw data to decisions. Projects in Airflow, dbt, Kafka, Spark and Terraform.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://danieldomingueztrejo.com">
+<meta property="og:title" content="Daniel Domínguez Trejo — Data Engineer">
+<meta property="og:description" content="Data engineer building reliable pipelines from raw data to decisions.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔀</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Literata:opsz,wght@7..72,400..600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF2F5;--card:#F8FAFB;--ink:#14212B;--mute:#4D5C68;--line:#C4CFD8;--accent:#2B44E0;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1820;--card:#13202A;--ink:#E7EDF2;--mute:#9BA9B5;--line:#27353F;--accent:#8EA2FF}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 'Literata',Georgia,serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+header.top{padding:28px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:600}
+header.top nav{display:flex;gap:22px}
+header.top a{color:var(--ink);text-decoration:none}
+header.top a:hover{color:var(--accent)}
+.hero{padding:56px 0 40px}
+h1{font-size:clamp(2.7rem,8vw,5.4rem);font-weight:800}
+.lead{font-size:clamp(1.15rem,2.6vw,1.45rem);max-width:34em;margin:24px 0 0}
+.meta{color:var(--mute);margin:12px 0 0}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:600}
+.links a{padding:10px 18px;border:2px solid var(--ink);color:var(--ink);text-decoration:none;border-radius:999px}
+.links a.primary{background:var(--ink);color:var(--bg)}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.links a.primary:hover{background:var(--accent);color:var(--bg)}
+.pipe{margin-top:44px;width:100%;height:auto;color:var(--mute)}
+.pipe .base{stroke:var(--line);stroke-width:3}
+.pipe .flow{stroke:var(--accent);stroke-width:3;stroke-dasharray:6 14;animation:flow 1.6s linear infinite}
+.pipe circle{fill:var(--bg);stroke:var(--ink);stroke-width:3}
+.pipe text{fill:currentColor;font:600 13px 'Bricolage Grotesque',system-ui,sans-serif;text-anchor:middle}
+@keyframes flow{to{stroke-dashoffset:-20}}
+@media (prefers-reduced-motion:reduce){.pipe .flow{animation:none}html{scroll-behavior:auto}}
+main{border-left:2px solid var(--line);margin-left:6px;padding-left:34px}
+section{position:relative;padding:40px 0}
+section::before{content:"";position:absolute;left:-44px;top:50px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:22px}
+h3{font-size:1.35rem}
+.proj{padding:24px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj p{margin:10px 0 14px;max-width:38em}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 14px;list-style:none;font:600 .85rem 'Bricolage Grotesque',system-ui,sans-serif}
+.tags li{padding:3px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
+.tags li.status{border-color:var(--accent);color:var(--accent)}
+.proj .l{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:600;margin-right:18px}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:12px 28px}
+dt{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:700}
+dd{margin:0}
+p{margin:0 0 14px;max-width:40em}
+footer{padding:40px 0 56px;color:var(--mute);font-size:.95rem}
+@media (max-width:560px){main{padding-left:24px}section::before{left:-34px}dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span>danieldomingueztrejo.com</span>
+    <nav aria-label="Sections"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <div class="hero">
+    <h1>Daniel<br>Domínguez Trejo</h1>
+    <p class="lead">Data engineer building reliable pipelines that take raw data to decisions people can trust.</p>
+    <!-- EDIT: replace the bracketed text -->
+    <p class="meta">Recent graduate based in [City, Country] · open to remote and relocation.</p>
+    <div class="links">
+      <a class="primary" href="#contact">Get in touch</a>
+      <a href="https://github.com/your-username">GitHub</a>
+      <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
+      <a href="/Daniel-Dominguez-Trejo-CV.pdf">Download CV</a>
+    </div>
+    <svg class="pipe" viewBox="0 0 640 64" role="img" aria-label="Data pipeline: source, ingest, transform, warehouse, serve">
+      <line class="base" x1="20" y1="22" x2="620" y2="22"/>
+      <line class="flow" x1="20" y1="22" x2="620" y2="22"/>
+      <circle cx="20" cy="22" r="9"/><circle cx="170" cy="22" r="9"/><circle cx="320" cy="22" r="9"/><circle cx="470" cy="22" r="9"/><circle cx="620" cy="22" r="9"/>
+      <text x="28" y="56">Source</text><text x="170" y="56">Ingest</text><text x="320" y="56">Transform</text><text x="470" y="56">Warehouse</text><text x="612" y="56">Serve</text>
+    </svg>
+  </div>
+
+  <main>
+    <section id="projects">
+      <h2>Projects</h2>
+      <!-- EDIT: replace descriptions and links as you finish each project -->
+      <article class="proj">
+        <h3>Open data to dashboard pipeline</h3>
+        <p>Pulls a public open-data API on a schedule, models it into a star schema, tests data quality on every run, and serves the result in a dashboard.</p>
+        <ul class="tags"><li class="status">In progress</li><li>Airflow</li><li>dbt</li><li>DuckDB</li><li>Docker</li></ul>
+        <a class="l" href="https://github.com/your-username/open-data-pipeline">Code</a>
+      </article>
+      <article class="proj">
+        <h3>Real-time event streaming</h3>
+        <p>Simulated events flow through Kafka into Spark Structured Streaming, with windowed aggregations written to a queryable store.</p>
+        <ul class="tags"><li class="status">In progress</li><li>Kafka</li><li>Spark</li><li>Python</li></ul>
+        <a class="l" href="https://github.com/your-username/streaming-events">Code</a>
+      </article>
+      <article class="proj">
+        <h3>Cloud deployment with Terraform and CI/CD</h3>
+        <p>The first pipeline deployed to the cloud as code, with automated tests and releases on every push.</p>
+        <ul class="tags"><li class="status">In progress</li><li>Terraform</li><li>GitHub Actions</li><li>AWS or GCP</li></ul>
+        <a class="l" href="https://github.com/your-username/cloud-pipeline">Code</a>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <!-- EDIT: keep only what you can talk about in an interview -->
+      <dl>
+        <dt>Languages</dt><dd>Python, SQL</dd>
+        <dt>Pipelines</dt><dd>Airflow, dbt, Spark, Kafka</dd>
+        <dt>Storage</dt><dd>DuckDB, PostgreSQL, BigQuery</dd>
+        <dt>Infrastructure</dt><dd>Docker, Terraform, GitHub Actions</dd>
+        <dt>Languages spoken</dt><dd>Spanish (native), English ([level])</dd>
+      </dl>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I recently graduated in [your degree] from [your university]. I like the unglamorous parts of data work: pipelines that fail loudly, tests that catch bad data early, and documentation the next person can follow.</p>
+      <p>I’m looking for a junior data engineering role where I can keep learning from a team that ships.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>The quickest way to reach me is email.</p>
+      <p><a href="mailto:hello@danieldomingueztrejo.com">hello@danieldomingueztrejo.com</a></p>
+    </section>
+  </main>
+
+  <footer>© 2026 Daniel Domínguez Trejo</footer>
+</div>
+</body>
+</html>
