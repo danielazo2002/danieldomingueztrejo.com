@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daniel Domínguez Trejo — Data Engineer</title>
-<meta name="description" content="Data engineer building reliable pipelines from raw data to decisions. Projects in Airflow, dbt, Kafka, Spark and Terraform.">
+<meta name="description" content="Data engineer building reliable pipelines from raw data to decisions. Projects in Airflow, dbt, DuckDB and computer vision.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://danieldomingueztrejo.com">
 <meta property="og:title" content="Daniel Domínguez Trejo — Data Engineer">
@@ -73,8 +73,7 @@ footer{padding:40px 0 56px;color:var(--mute);font-size:.95rem}
   <div class="hero">
     <h1>Daniel Domínguez Trejo</h1>
     <p class="lead">Data engineer building reliable pipelines that take raw data to decisions people can trust.</p>
-    <!-- EDIT: replace the bracketed text -->
-    <p class="meta">Recent graduate based in Madrid,Spain · open to remote and relocation.</p>
+    <p class="meta">Recent graduate based in Madrid, Spain · open to remote and relocation.</p>
     <div class="links">
       <a class="primary" href="#contact">Get in touch</a>
       <a href="https://github.com/danielazo2002">GitHub</a>
@@ -92,36 +91,32 @@ footer{padding:40px 0 56px;color:var(--mute);font-size:.95rem}
   <main>
     <section id="projects">
       <h2>Projects</h2>
-      <!-- EDIT: replace descriptions and links as you finish each project -->
       <article class="proj">
-        <h3>Open data to dashboard pipeline</h3>
-        <p>Pulls a public open-data API on a schedule, models it into a star schema, tests data quality on every run, and serves the result in a dashboard.</p>
-        <ul class="tags"><li class="status">In progress</li><li>Airflow</li><li>dbt</li><li>DuckDB</li><li>Docker</li></ul>
-        <a class="l" href="https://github.com/your-username/open-data-pipeline">Code</a>
+        <h3>Madrid air quality &amp; weather pipeline</h3>
+        <p><strong>Does the weather drive air pollution in Madrid?</strong> A daily ELT pipeline that joins hourly readings from Madrid’s 24 air-quality stations with Open-Meteo weather for each station: about 3 million hourly measurements since January 2024, published as a live dashboard.</p>
+        <p>Python extractors land raw files untouched; dbt models them on DuckDB; Airflow (with Cosmos, one task per dbt model) runs it all in Docker. 72 automated tests run in CI on every push, including dbt unit tests for the missing and repeated hours of daylight-saving changes. Every non-obvious choice is written down in 34 design decisions.</p>
+        <p>One finding: on weekdays NO₂ peaks around 8:00 and 21:00, and the morning peak mostly disappears at weekends — the traffic signature.</p>
+        <ul class="tags"><li class="status">Live</li><li>Python</li><li>Airflow</li><li>dbt</li><li>DuckDB</li><li>Docker</li><li>GitHub Actions</li><li>Quarto</li></ul>
+        <a class="l" href="https://danielazo2002.github.io/madrid-air-quality-pipeline/">Live dashboard</a>
+        <a class="l" href="https://github.com/danielazo2002/madrid-air-quality-pipeline">Code</a>
+        <a class="l" href="https://github.com/danielazo2002/madrid-air-quality-pipeline/blob/main/DECISIONS.md">Design decisions</a>
       </article>
       <article class="proj">
-        <h3>Real-time event streaming</h3>
-        <p>Simulated events flow through Kafka into Spark Structured Streaming, with windowed aggregations written to a queryable store.</p>
-        <ul class="tags"><li class="status">In progress</li><li>Kafka</li><li>Spark</li><li>Python</li></ul>
-        <a class="l" href="https://github.com/your-username/streaming-events">Code</a>
-      </article>
-      <article class="proj">
-        <h3>Cloud deployment with Terraform and CI/CD</h3>
-        <p>The first pipeline deployed to the cloud as code, with automated tests and releases on every push.</p>
-        <ul class="tags"><li class="status">In progress</li><li>Terraform</li><li>GitHub Actions</li><li>AWS or GCP</li></ul>
-        <a class="l" href="https://github.com/your-username/cloud-pipeline">Code</a>
+        <h3>Steel defect segmentation · ArcelorMittal R&amp;D</h3>
+        <p>Inspecting steel micrographs for copper infiltration was manual and slow. I built a U-Net that segments the defects, added feature engineering to measure each one, and shipped a Gradio app where engineers inspect results and download them. The project became my Bachelor’s thesis, graded 10/10.</p>
+        <ul class="tags"><li class="status">Industry project</li><li>Python</li><li>U-Net</li><li>Computer vision</li><li>Gradio</li></ul>
+        <p class="meta">Code is confidential to ArcelorMittal.</p>
       </article>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
-      <!-- EDIT: keep only what you can talk about in an interview -->
       <dl>
         <dt>Languages</dt><dd>Python, SQL</dd>
-        <dt>Pipelines</dt><dd>Airflow, dbt, Spark, Kafka</dd>
-        <dt>Storage</dt><dd>DuckDB, PostgreSQL, BigQuery</dd>
-        <dt>Infrastructure</dt><dd>Docker, Terraform, GitHub Actions</dd>
-        <dt>Languages spoken</dt><dd>Spanish (native), English ([level])</dd>
+        <dt>Pipelines</dt><dd>Airflow, dbt, DuckDB</dd>
+        <dt>Quality &amp; tooling</dt><dd>pytest, dbt tests, Docker, GitHub Actions, uv</dd>
+        <dt>Machine learning</dt><dd>CNNs (U-Net), computer vision, feature engineering, Gradio</dd>
+        <dt>Languages spoken</dt><dd>Spanish (native), English (C1)</dd>
       </dl>
     </section>
 
